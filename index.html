@@ -15,13 +15,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<link rel="stylesheet" href="css/slider.css">
 <!--// css -->
+
 <!-- font -->
 <link href='//fonts.googleapis.com/css?family=Josefin+Sans:400,100,100italic,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 <!-- //font -->
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.js"></script>
+<script src ="js/slider.js"></script>
 
 </head>
 <body> 
@@ -56,19 +59,36 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<!-- //Navbar -->
 
 		<!-- Slider -->
+		<!--
 		<div class="slider">
-			<ul class="rslides" id="slider">
-				<li>
-					<img src="images/banner1.jpg" alt="" />
-				</li>
-				<li>
-					<img src="images/banner2.jpg" alt="" />
-				</li>
-				<li>
-					<img src="images/banner3.jpg" alt="" />
-				</li>
+			<div class="miSlider fade">
+				<img src="images/banner1.jpg" alt="">
+			</div>
+			<div class="miSlider fade">
+				<img src="images/banner2.jpg" alt="">
+			</div>
+			<div class="miSlider fade">
+				<img src="images/banner3.jpg" alt="">
+			</div>
+			<div class="direcciones">
+				<a href="#" class="atras" onclick="avanzaSlide(-1)">&#10094;</a>
+				<a href="#" class="adelante" onclick="avanzaSlide(1)">&#10095;</a>
+			</div>
+			<div class="barras">
+				<span class="barra active" onclick="posicionSlide(1)"></span>
+				<span class="barra" onclick="posicionSlide(2)"></span>
+				<span class="barra" onclick="posicionSlide(3)"></span>
+			</div>
+		</div>
+		-->
+		<div class="slider">
+			<ul>
+				<li><img src="images/banner1.jpg" alt=""></li>
+				<li><img src="images/banner2.jpg" alt=""></li>
+				<li><img src="images/banner3.jpg" alt=""></li>
 			</ul>
 		</div>
+		
 		<!-- //Slider -->
 
 	</div>
