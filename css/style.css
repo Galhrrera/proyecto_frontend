@@ -38,6 +38,15 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'Josefin Sans', sans-serif;
 	letter-spacing:1px;
 }
+
+.centrar{
+	width: 100%;
+	text-align: center;
+	margin-left:auto;
+	
+}
+
+
 p {
 	margin:0;
 }
@@ -448,9 +457,10 @@ padding: 70px 0 165px 0;
 }
 .service-grid-agileits a{
 	color:#E91E63;
+	text-align: center;
 	border:2px solid #E91E63;
-	font-size:15px;
-	margin-top:15px;
+	font-size:30px;
+	margin-left:165%;
 	padding:7px 15px;
 	display:inline-block;
 		transition: 0.5s all;
