@@ -44,6 +44,7 @@ window.onload = function () {
 function cambiarSesion(bandera) {
 
     logeado = bandera;
+    console.log(logeado);
     localStorage.setItem("logeado", logeado);
 
     if (logeado) {
