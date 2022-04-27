@@ -25,10 +25,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic'
         rel='stylesheet' type='text/css'>
     <!-- //font -->
-    <!--<script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.js"></script>-->
-    <script src="js/registro.js"></script>
-    <script src="js/md5.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
 </head>
 
 <body>
@@ -64,19 +62,56 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
         </nav>
     </div>
+    <!-- banner 
+<div class="contact-agileinfo">
+	<div class="container">
+		<h2>Reach Us</h2>
+		<div class="col-md-4 contact-left-agile">
+			<div class="address-w3-agileits" id="address">
+				<h4>Address</h4>
+				<address>
+				<ul>
+					<li><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Parma Via Modena</li>
+					<li><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Sant'Agata Bolognese</li>
+					<li><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> BO, Italy</li>
+				</ul>
+				</address>
+			</div>
+			<div class="phone-agileits-w3layouts" id="phone">
+				<h4>Phone</h4>
+				<p><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> +1 (734) 123-4567</p>
+				<p><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> +1 (739) 648-7114</p>
+			</div>
+			<div class="email">
+				<h4>Email</h4>
+				<p><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="mailto:mail@example.com"> info@example.com</a></p>
+			</div>
+		</div>
+		<div class="col-md-8 contact-right-w3">
+			<form action="https://sendmail.w3layouts.com/submitForm" method="post">
+				<input type="text" class="text" name="w3lName" placeholder="Name" required="">
+				<input type="text" class="text" name="w3lSender" placeholder="Email" required="">
+				<input type="text" class="text" name="w3lPhone" placeholder="Phone" required="">
+				<input type="text" class="text" name="w3lSubject" placeholder="Subject" required="">
+				<textarea name="w3lMessage" placeholder="Message" required=""></textarea>
+				<input type="submit" class="more_btn" value="Send Message">
+			</form>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+-->
 
-    <!-- ventana emergente -->
-    <div id="ventana" class="ligthbox hidden">
-        <div class="contenido-ventana">
-            <span></span>
-            <h1></h1>
-            <p></p>
-            <button type="button" id="btn_cerrar_modal"></button>
-        </div>
-    </div>
-
-    <!-- ventana emergente -->
-    
+    <!-- Map-iFrame 
+<div class="map" id="map">
+	<div class="map-hover">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22702.22744502486!2d11.113366067229226!3d44.662878362361056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fc3eca9065c15%3A0x12ec8a03aadae866!2s40019+Sant&#39;Agata+Bolognese+BO%2C+Italy!5e0!3m2!1sen!2sin!4v1451281303075" allowfullscreen></iframe>
+		<div class="map-hover-1"></div>
+	</div>
+</div>
+-->
+    <!-- //Map-iFrame -->
+    <!-- footer -->
     <div class="container">
         ::
         <h2>Registro</h2>
@@ -87,60 +122,93 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <span class="fa fa-user-circle-o"></span>
                     </div>
                     <div class="col-md-8 contact-right-w3">
-                    
-
-                        <form action="" id="formulario">
-                            
+                        <!--content-bottom-->
+                        <!--col-md-8 contact-right-w3-->
+                        <!--
+                        <form action="#" method="post">
                             <div class="field-group">
 
                                 <div class="content-input-field">
-                                    <input name="text1" id="nombre" type="text" class="text" value=""
-                                        placeholder="Ingrese el nombre" required="">
+                                    <input name="text1" id="text1" type="text" class="text" value=""
+                                        placeholder="Nombre de usuario" required="">
                                 </div>
                             </div>
-                            
                             <div class="field-group">
 
                                 <div class="content-input-field">
-                                    <input name="text1" id="correo" type="email" class="text" value=""
-                                        placeholder="Ingrese el correo" required="">
+                                    <input name="text1" id="text1" type="email" class="text" value=""
+                                        placeholder="Email" required="">
                                 </div>
                             </div>
-                            
                             <div class="field-group">
 
                                 <div class="content-input-field">
-                                    <input name="text1" id="celular" type="text" class="text" value=""
-                                        placeholder="Ingrese el número de celular" required="">
+                                    <input name="text1" id="text3" type="text" class="text" value=""
+                                        placeholder="Teléfono" required="">
                                 </div>
                             </div>
-                            
                             <div class="field-group">
                                 <div class="content-input-field">
-                                    <input name="password" id="clave" type="Password" class="text"
+                                    <input name="password" id="myInput" type="Password" class="text"
                                         placeholder="Contraseña">
                                 </div>
                             </div>
-
                             <div class="content-input-field">
-                                <!--<input type="submit" id="btn_enviar" class="btn" value="Registrarse"> Registrarse</button>-->
-                                <button type="submit" id="btn_enviar" class="btn" onclick="iniciarRegistro()">Registrarse</button>
+                                <input type="submit" class="more_btn" value="Registrarse">
+                                <button type="submit" class="more_btn" value="Registrarse">Sign Up</button>
                             </div>
                             <div class="list-login-bottom text-center mt-lg-5 mt-4">
-    
+
                                 <a href="#" class="">Al hacer click en Registrarse, acepta todos los términos</a>
-    
+
+
+
                             </div>
-                            
+                        </form>
+                        -->
+                        <form action="" id="formulario">
+                            <div class="field-group">
+    
+                                <div class="content-input-field">
+                                    <input name="text1" id="text1" type="email" value="" placeholder="Ingrese el correo" required="">
+                                </div>
+                            </div>
+                            <div class="field-group">
+                                <div class="content-input-field">
+                                    <input name="password" id="myInput" type="Password" placeholder="Ingresa la clave" required="">
+                                </div>
+                            </div>
+                            <div class="content-input-field">
+                                <button type="submit" id="btn_enviar" class="btn">Ingresar</button>
+                            </div>
+                            <ul class="list-login">
+                                <li class="switch-slide">
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                        Mantener sesión
+                                    </label>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-right">¿Olvido la clave?</a>
+                                </li>
+                                <li class="clearfix"></li>
+                            </ul>
+                            <ul class="list-login-bottom">
+                                <li class="">
+                                    <a href="register.html" class="">¿No tiene una cuenta?</a>
+                                </li>
+                                <li class="">
+                                    <a href="#" class="text-right">¿Necesita ayuda?</a>
+                                </li>
+                                <li class="clearfix"></li>
+                            </ul>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
     </div>
-
-    <!-- footer -->
-    
 
 
 

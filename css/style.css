@@ -1168,6 +1168,13 @@ p.agileits{
     padding: 250px 0px 6px 0px;
     font-weight: 600;
 }
+
+.events-nombre p {
+    font-size: 30px;
+    color: #dfdc00;
+    padding: 250px 0px 6px 0px;
+    font-weight: 600;
+}
 .events-text-w3-agile ul li{
 	display:inline;
 	color:#fff;
