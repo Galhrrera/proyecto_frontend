@@ -2726,4 +2726,20 @@ color:rgb(2, 24, 136) !important;
 	.w3l_categories h3, .w3l_archives h3, .w3agile_flickr_posts h3, .agileits_reply h3, .wthree_blog_left_grid h3, .newsletter h4 {
 		font-size: 1.2em!important;
 	}
+
+	.team-w3layouts {
+		display: flex;
+		justify-content: center;
+	  }
+	
+	  .container{
+		display: flex;
+		justify-content: center;
+	  }
+
+	.team {
+		padding: 10px;
+		margin: 10px;
+		background-color: yellow;
+	  }
 }
