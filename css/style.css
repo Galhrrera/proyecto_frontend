@@ -102,7 +102,16 @@ img {
 	padding: 5px 15px;
 }
 
+.menu>li {
+	
+	padding: 5px 15px;
+}
+
 .navbar-default .navbar-nav>li>a {
+	color: #fff;
+}
+
+.navbar-default .menu>li>a {
 	color: #fff;
 }
 
@@ -111,9 +120,21 @@ img {
 	color: #FFF;
 }
 
+.navbar-default .menu>li>a:hover,
+.navbar-default .menu>li>a:focus {
+	color: #FFF;
+}
+
 .navbar-default .navbar-nav>.active>a,
 .navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>.active>a:focus {
+	color: #E91E63;
+	background-color: transparent;
+}
+
+.navbar-default .menu>.active>a,
+.navbar-default .menu>.active>a:hover,
+.navbar-default .nenu>.active>a:focus {
 	color: #E91E63;
 	background-color: transparent;
 }
@@ -2085,6 +2106,10 @@ a.blog-read:hover {
 		padding: 5px 5px;
 	}
 
+	.menu>li {
+		padding: 5px 5px;
+	}
+
 	.trend-w3layouts h2,
 	.new-w3-agile h3,
 	.services-agileits-w3layouts h3,
@@ -2476,6 +2501,11 @@ a.blog-read:hover {
 	}
 
 	.navbar-nav {
+		margin: 0;
+		background: #02178e;
+	}
+
+	.menu{
 		margin: 0;
 		background: #02178e;
 	}

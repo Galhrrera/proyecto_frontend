@@ -2,7 +2,7 @@ let btn_enviar, btn_cerrar_modal, formulario, ventana;
 let correo,clave, usuario, imagen, titulo,mensaje;
 
 function iniciarLogin(){
-	//console.log("Entró a iniciar login");
+	console.log("Entró a iniciar login");
 	btn_enviar = document.getElementById("btn_enviar");
 	btn_cerrar_modal = document.getElementById("btn_cerrar_modal");
 	mensaje = document.querySelector("#ventana p");
@@ -10,7 +10,7 @@ function iniciarLogin(){
 	imagen = document.querySelector("#ventana span");
 	correo = document.getElementById("correo");
 	clave = document.getElementById("clave");
-	ventana = document.querySelector("#ventana");
+	ventana = document.getElementById("ventana");
 	formulario = document.getElementById("formulario");
 	formulario.addEventListener("submit",procesarLogin);
 	btn_cerrar_modal.addEventListener("click",cerrarVentana);
