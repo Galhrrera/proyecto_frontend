@@ -75,7 +75,8 @@ function procesarRegistro(evento){
 	str_usuario = JSON.stringify(usuario);
 	localStorage.setItem("usuario",str_usuario);
 
-	mensaje_exito("Muy bien, registro exitoso");
+	//mensaje_exito("Muy bien, registro exitoso");
+	alert("Muy bien, registro exitoso");
 	abrirVentana();
 	evento.preventDefault();
 

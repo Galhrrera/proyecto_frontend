@@ -2,22 +2,20 @@ let btn_enviar, btn_cerrar_modal, formulario, ventana;
 let correo, clave, usuario, imagen, titulo, mensaje;
 
 function iniciarLogin() {
-	try {
-		console.log("Entró a iniciar login");
-		btn_enviar = document.getElementById("btn_enviar");
-		btn_cerrar_modal = document.getElementById("btn_cerrar_modal");
-		mensaje = document.querySelector("#ventana p");
-		titulo = document.querySelector("#ventana h1");
-		imagen = document.querySelector("#ventana span");
-		correo = document.getElementById("correo");
-		clave = document.getElementById("clave");
-		ventana = document.getElementById("ventana");
-		formulario = document.getElementById("formulario");
-		formulario.addEventListener("submit", procesarLogin);
-		btn_cerrar_modal.addEventListener("click", cerrarVentana);
-	} catch (error) {
-		console.log(error);
-	}
+	
+	console.log("Entró a iniciar login");
+	btn_enviar = document.getElementById("btn_enviar");
+	btn_cerrar_modal = document.getElementById("btn_cerrar_modal");
+	mensaje = document.querySelector("#ventana p");
+	titulo = document.querySelector("#ventana h1");
+	imagen = document.querySelector("#ventana span");
+	correo = document.getElementById("correo");
+	clave = document.getElementById("clave");
+	ventana = document.getElementById("ventana");
+	formulario = document.getElementById("formulario");
+	formulario.addEventListener("submit", procesarLogin);
+	btn_cerrar_modal.addEventListener("click", cerrarVentana);
+	
 }
 
 function mensaje_exito(texto_mensaje) {
@@ -47,12 +45,11 @@ function abrirVentana() {
 }
 
 function cerrarVentana(evento) {
-	//ventana.classList.add("hidden");
 	location.href = "index.html";
 }
 
 function procesarLogin(evento) {
-	console.log("Entró a procesar login")
+	alert("Entró a procesar login")
 
 
 	let txt_correo, txt_clave;
@@ -64,12 +61,12 @@ function procesarLogin(evento) {
 	str_usuario = localStorage.getItem("usuario");
 	usuario = JSON.parse(str_usuario);
 
-	console.log(usuario.correo);
+	alert(usuario.correo);
 
-	if (usuario) {
+	 if (usuario) {
 		if (usuario.correo === txt_correo && usuario.clave === txt_clave) {
-			cambiarSesion(true);
-			mensaje_exito("Muy bien, logueo exitoso, continua disfrutando del sitio.");
+			//cambiarSesion(true);
+			alert("Muy bien, logueo exitoso, continua disfrutando del sitio.");
 		}
 		else {
 			error = true;
@@ -79,13 +76,10 @@ function procesarLogin(evento) {
 	}
 
 	if (error) {
-		mensaje_error("Revisa los datos, ocurrio un error.");
-	}
+		alert("Revisa los datos, ocurrio un error.");
+	} 
 
-	abrirVentana();
+	//abrirVentana();
 	evento.preventDefault();
-
-
-	//console.log(evento.target);
 
 }
