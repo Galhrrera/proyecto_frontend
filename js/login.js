@@ -5,7 +5,6 @@ let correo, clave, usuario, imagen, titulo, mensaje;
 
 function iniciarLogin() {
 	
-<<<<<<< HEAD
 		btn_enviar = document.getElementById("btn_enviar");
 		btn_cerrar_modal = document.getElementById("btn_cerrar_modal");
 		mensaje = document.querySelector("#ventana p");
@@ -17,21 +16,6 @@ function iniciarLogin() {
 		formulario = document.getElementById("formulario");
 		formulario.addEventListener("submit", procesarLogin);
 		btn_cerrar_modal.addEventListener("click", cerrarVentana);
-=======
-	console.log("Entró a iniciar login");
-	btn_enviar = document.getElementById("btn_enviar");
-	btn_cerrar_modal = document.getElementById("btn_cerrar_modal");
-	mensaje = document.querySelector("#ventana p");
-	titulo = document.querySelector("#ventana h1");
-	imagen = document.querySelector("#ventana span");
-	correo = document.getElementById("correo");
-	clave = document.getElementById("clave");
-	ventana = document.getElementById("ventana");
-	formulario = document.getElementById("formulario");
-	formulario.addEventListener("submit", procesarLogin);
-	btn_cerrar_modal.addEventListener("click", cerrarVentana);
-	
->>>>>>> b5feae87d976040cf8f2e78724cd16b9fbad13cb
 }
 
 function mensaje_exito(texto_mensaje) {
@@ -61,15 +45,12 @@ function abrirVentana() {
 }
 
 function cerrarVentana(evento) {
+	//ventana.classList.add("hidden");
 	location.href = "index.html";
 }
 
 function procesarLogin(evento) {
-<<<<<<< HEAD
 	//console.log("Entró a procesar login")
-=======
-	alert("Entró a procesar login")
->>>>>>> b5feae87d976040cf8f2e78724cd16b9fbad13cb
 
 
 	let txt_correo, txt_clave;
@@ -82,23 +63,15 @@ function procesarLogin(evento) {
 	usuario = JSON.parse(str_usuario);
 
 	alert(usuario.correo);
-<<<<<<< HEAD
 	alert(usuario.clave);
-=======
->>>>>>> b5feae87d976040cf8f2e78724cd16b9fbad13cb
 
-	 if (usuario) {
+	if (usuario) {
 		if (usuario.correo === txt_correo && usuario.clave === txt_clave) {
-<<<<<<< HEAD
 			cambiarSesion(true);
 			alert("Muy bien, logueo exitoso, continua disfrutando del sitio.");
 			//mensaje_exito("Logeado");
 			//abrirVentana();
 			window.location="index.html";
-=======
-			//cambiarSesion(true);
-			alert("Muy bien, logueo exitoso, continua disfrutando del sitio.");
->>>>>>> b5feae87d976040cf8f2e78724cd16b9fbad13cb
 		}
 		else {
 			error = true;
@@ -109,16 +82,11 @@ function procesarLogin(evento) {
 
 	if (error) {
 		alert("Revisa los datos, ocurrio un error.");
-<<<<<<< HEAD
 	}
-=======
-	} 
->>>>>>> b5feae87d976040cf8f2e78724cd16b9fbad13cb
 
 	//abrirVentana();
 	evento.preventDefault();
 
-<<<<<<< HEAD
 
 	//console.log(evento.target);
 
@@ -143,6 +111,4 @@ function cambiarSesion(bandera) {
             location.href = "index.html";
         }
     }
-=======
->>>>>>> b5feae87d976040cf8f2e78724cd16b9fbad13cb
 }

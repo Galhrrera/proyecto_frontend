@@ -26,7 +26,7 @@ window.onload = function () {
     contenedor_menu.innerHTML = menu_html;
     setTimeout(hideURLbar, 0);
 
-    //cont_sesion = document.querySelector(".forms");
+    cont_sesion = document.querySelector(".forms");
     cambiarSesion(JSON.parse(localStorage.getItem("logeado")));
 
     if (iniciarLogin) {
@@ -101,15 +101,11 @@ function abrirPagina(evento) {
     let pagina = evento.target.id;
     let puede_ingresar = true;
 
-<<<<<<< HEAD
     
 
-=======
->>>>>>> b5feae87d976040cf8f2e78724cd16b9fbad13cb
     // || pagina === "item_4" || pagina === "item_5"
     if (pagina === "item_3") {
         puede_ingresar = logeado;
-        alert("Puede ingresar");
     }
 
     if (puede_ingresar) {
