@@ -3638,8 +3638,34 @@ a.blog-read:hover {
 
 #btn_whatsapp {
 	position: fixed;
-	max-width: 10%;
+	max-width: 5%;
 	max-height: 15%;
 	bottom: 10px;
 	right: 10px;
+}
+
+footer{
+    background: white;
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.footer_contenedor{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px;
+}
+
+.contenido_footer{
+    text-align: center;
+}
+
+.titulo_final{
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
 }

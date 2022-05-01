@@ -5,13 +5,6 @@ var iniciarLogin = undefined, iniciarRegistro = undefined;
 let cont_sesion;
 let logeado = false;
 const menu_html = `
-<!--
-<li class="hover-effect"><a href="index.html">Home</a></li>
-<li class="hover-effect"><a href="about.html">About</a></li>
-<li class="hover-effect"><a href="games.html">Games</a></li>
-<li class="hover-effect"><a href="news.html">News</a></li>
-<li class="hover-effect"><a href="contact.html">Contact</a></li>
--->
 <li class="hover-effect"><a href="javascript:void(0)" id = "item_1">Home</a></li>
 <li class="hover-effect"><a href="javascript:void(0)" id = "item_2">About</a></li>
 <li class="hover-effect"><a href="javascript:void(0)" id = "item_3">Games</a></li>
@@ -28,22 +21,23 @@ let sesion_off = `
 <span class="fa fa-pencil-square-o"></span> Registro</a>`;
 
 
-
 window.onload = function () {
     contenedor_menu = document.querySelector(".nav");
     contenedor_menu.innerHTML = menu_html;
     setTimeout(hideURLbar, 0);
 
+
+
     cont_sesion = document.querySelector(".forms");
     cambiarSesion(JSON.parse(localStorage.getItem("logeado")));
 
     if (iniciarLogin) {
-        
+
         iniciarLogin();
     }
 
     if (iniciarRegistro) {
-        
+
         iniciarRegistro();
     }
 
@@ -51,20 +45,20 @@ window.onload = function () {
 }
 
 function cambiarSesion(bandera) {
-    
+
 
     logeado = bandera;
     //console.log(logeado);
-    
+
     localStorage.setItem("logeado", logeado);
 
     if (logeado) {
         cont_sesion.innerHTML = sesion_on;
-        
+
     }
     else {
         cont_sesion.innerHTML = sesion_off;
-        
+
 
         if (cerrarSesion()) {
             location.href = "index.html";
@@ -90,15 +84,15 @@ function asignarNavegacion() {
     paginas["item_2"] = "about.html";
     paginas["item_3"] = "games.html";
     paginas["item_4"] = "news.html";
-    paginas["item_5"] = "single.html";
-    paginas["item_6"] = "contact.html";
+    paginas["item_5"] = "contact.html";
 
-    
+
+
     setTimeout(hideURLbar, 500);
 
-    
+
     for (var i of menu_items) {
-        
+
         i.addEventListener("click", abrirPagina);
     }
 }
@@ -109,20 +103,20 @@ function hideURLbar() {
 
 function abrirPagina(evento) {
 
-    
+
     let pagina = evento.target.id;
     let puede_ingresar = true;
 
-    
+
 
     // || pagina === "item_4" || pagina === "item_5"
     if (pagina === "item_3") {
-    
+
         puede_ingresar = logeado;
     }
 
     if (puede_ingresar) {
-        
+
         location.href = paginas[pagina];
     }
     else {
