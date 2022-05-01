@@ -5,11 +5,19 @@ var iniciarLogin = undefined, iniciarRegistro = undefined;
 let cont_sesion;
 let logeado = false;
 const menu_html = `
+<!--
 <li class="hover-effect"><a href="index.html">Home</a></li>
 <li class="hover-effect"><a href="about.html">About</a></li>
 <li class="hover-effect"><a href="games.html">Games</a></li>
 <li class="hover-effect"><a href="news.html">News</a></li>
-<li class="hover-effect"><a href="contact.html">Contact</a></li>`;
+<li class="hover-effect"><a href="contact.html">Contact</a></li>
+-->
+<li class="hover-effect"><a href="javascript:void(0)" id = "item_1">Home</a></li>
+<li class="hover-effect"><a href="javascript:void(0)" id = "item_2">About</a></li>
+<li class="hover-effect"><a href="javascript:void(0)" id = "item_3">Games</a></li>
+<li class="hover-effect"><a href="javascript:void(0)" id = "item_4">News</a></li>
+<li class="hover-effect"><a href="javascript:void(0)" id = "item_5">Contact</a></li>
+`;
 let sesion_on = `
 <a href="javascript:void(0)" id="cerrar_sesion" onClick="cambiarSesion(false);" class="btn"><i class="fa fa-sign-out" aria-hidden="true"></i> Cerrar sesión</a>
 `;
@@ -85,11 +93,14 @@ function asignarNavegacion() {
     paginas["item_5"] = "single.html";
     paginas["item_6"] = "contact.html";
 
-    /*
+    
+    setTimeout(hideURLbar, 500);
+
+    
     for (var i of menu_items) {
         
         i.addEventListener("click", abrirPagina);
-    }*/
+    }
 }
 
 function hideURLbar() {
@@ -98,6 +109,7 @@ function hideURLbar() {
 
 function abrirPagina(evento) {
 
+    
     let pagina = evento.target.id;
     let puede_ingresar = true;
 
@@ -105,10 +117,12 @@ function abrirPagina(evento) {
 
     // || pagina === "item_4" || pagina === "item_5"
     if (pagina === "item_3") {
+    
         puede_ingresar = logeado;
     }
 
     if (puede_ingresar) {
+        
         location.href = paginas[pagina];
     }
     else {
