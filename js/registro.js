@@ -12,9 +12,7 @@ const menu_html = `
 <li class="hover-effect"><a href="contact.html">Contact</a></li>`;
 
 let sesion_on = `
-<span>
-    <img src="images/avatar.png" alt="">
-</span>
+
 <a href="javascript:void(0)" id="cerrar_sesion" onClick="cambiarSesion(false);" class="btn"><i class="fa fa-sign-out" aria-hidden="true"></i> Cerrar sesión</a>
 `;
 let sesion_off = `
@@ -29,7 +27,7 @@ window.onload = function () {
     setTimeout(hideURLbar, 0);
 
     cont_sesion = document.querySelector(".forms");
-    //cambiarSesion(JSON.parse(localStorage.getItem("logeado")));
+    cambiarSesion(JSON.parse(localStorage.getItem("logeado")));
 
     if (iniciarLogin) {
         
@@ -139,7 +137,7 @@ function procesarRegistro(evento){
 	str_usuario = JSON.stringify(usuario);
 	localStorage.setItem("usuario",str_usuario);
 
-	alert("Muy bien, registro exitoso");
+	//alert("Muy bien, registro exitoso");
     mensaje_exito("registrado");
 	abrirVentana();
 	evento.preventDefault();

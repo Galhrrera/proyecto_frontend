@@ -1,21 +1,91 @@
 let btn_enviar, btn_cerrar_modal, formulario, ventana;
 let correo, clave, usuario, imagen, titulo, mensaje;
 
+/*
+navegacion centralizada
+*/
+let nombre,celular;
+let paginas = [];
+//var iniciarLogin = undefined
+let menu_items = [];
 
+const menu_html = `
+<li class="hover-effect"><a href="index.html">Home</a></li>
+<li class="hover-effect"><a href="about.html">About</a></li>
+<li class="hover-effect"><a href="games.html">Games</a></li>
+<li class="hover-effect"><a href="news.html">News</a></li>
+<li class="hover-effect"><a href="contact.html">Contact</a></li>`;
+
+let sesion_on = `
+<a href="javascript:void(0)" id="cerrar_sesion" onClick="cambiarSesion(false);" class="btn"><i class="fa fa-sign-out" aria-hidden="true"></i> Cerrar sesión</a>
+`;
+let sesion_off = `
+<a href="login.html" class="btn">
+<span class="fa fa-user-circle-o"></span> Login</a>
+<a href="register.html" class="btn">
+<span class="fa fa-pencil-square-o"></span> Registro</a>`;
+
+window.onload = function () {
+    contenedor_menu = document.querySelector(".nav");
+    contenedor_menu.innerHTML = menu_html;
+    setTimeout(hideURLbar, 0);
+
+    cont_sesion = document.querySelector(".forms");
+    cambiarSesion(JSON.parse(localStorage.getItem("logeado")));
+	/*
+    if (iniciarLogin) {
+        
+        iniciarLogin();
+    }
+
+    if (iniciarRegistro) {
+        
+        iniciarRegistro();
+    }*/
+
+    asignarNavegacion();
+	
+}
+
+function asignarNavegacion() {
+    menu_items.push(document.getElementById("item_1"));
+    menu_items.push(document.getElementById("item_2"));
+    menu_items.push(document.getElementById("item_3"));
+    menu_items.push(document.getElementById("item_4"));
+    menu_items.push(document.getElementById("item_5"));
+    menu_items.push(document.getElementById("item_6"));
+
+    paginas["item_1"] = "index.html";
+    paginas["item_2"] = "about.html";
+    paginas["item_3"] = "games.html";
+    paginas["item_4"] = "news.html";
+    paginas["item_5"] = "single.html";
+    paginas["item_6"] = "contact.html";
+
+    /*
+    for (var i of menu_items) {
+        i.addEventListener("click", abrirPagina);
+    }*/
+}
+
+/*
+fin navegacion centralizada*/
 
 function iniciarLogin() {
+
 	
-		btn_enviar = document.getElementById("btn_enviar");
-		btn_cerrar_modal = document.getElementById("btn_cerrar_modal");
-		mensaje = document.querySelector("#ventana p");
-		titulo = document.querySelector("#ventana h1");
-		imagen = document.querySelector("#ventana span");
-		correo = document.getElementById("correo");
-		clave = document.getElementById("clave");
-		ventana = document.getElementById("ventana");
-		formulario = document.getElementById("formulario");
-		formulario.addEventListener("submit", procesarLogin);
-		btn_cerrar_modal.addEventListener("click", cerrarVentana);
+
+	btn_enviar = document.getElementById("btn_enviar");
+	btn_cerrar_modal = document.getElementById("btn_cerrar_modal");
+	mensaje = document.querySelector("#ventana p");
+	titulo = document.querySelector("#ventana h1");
+	imagen = document.querySelector("#ventana span");
+	correo = document.getElementById("correo");
+	clave = document.getElementById("clave");
+	ventana = document.getElementById("ventana");
+	formulario = document.getElementById("formulario");
+	formulario.addEventListener("submit", procesarLogin);
+	btn_cerrar_modal.addEventListener("click", cerrarVentana);
 }
 
 function mensaje_exito(texto_mensaje) {
@@ -62,16 +132,12 @@ function procesarLogin(evento) {
 	str_usuario = localStorage.getItem("usuario");
 	usuario = JSON.parse(str_usuario);
 
-	alert(usuario.correo);
-	alert(usuario.clave);
-
 	if (usuario) {
 		if (usuario.correo === txt_correo && usuario.clave === txt_clave) {
 			cambiarSesion(true);
-			alert("Muy bien, logueo exitoso, continua disfrutando del sitio.");
-			//mensaje_exito("Logeado");
-			//abrirVentana();
-			window.location="index.html";
+			
+			mensaje_exito("Muy bien, logueo exitoso, continua disfrutando del sitio.");
+			
 		}
 		else {
 			error = true;
@@ -84,7 +150,8 @@ function procesarLogin(evento) {
 		alert("Revisa los datos, ocurrio un error.");
 	}
 
-	//abrirVentana();
+	mensaje_exito("Logeado");
+	abrirVentana();
 	evento.preventDefault();
 
 
@@ -93,22 +160,24 @@ function procesarLogin(evento) {
 }
 
 function cambiarSesion(bandera) {
-    alert("Entró a cambiar sesion");
+	
+	
 
-    logeado = bandera;
-    //console.log(logeado);
-    localStorage.setItem("logeado", logeado);
+	logeado = bandera;
+	//console.log(logeado);
+	localStorage.setItem("logeado", logeado);
 
-    if (logeado) {
-        cont_sesion.innerHTML = sesion_on;
-        alert("leageado");
-    }
-    else {
-        cont_sesion.innerHTML = sesion_off;
-        alert("sesion off");
 
-        if (cerrarSesion()) {
-            location.href = "index.html";
-        }
-    }
+	if (logeado) {
+		cont_sesion.innerHTML = sesion_on;
+		
+	}
+	else {
+		cont_sesion.innerHTML = sesion_off;
+		
+
+		if (cerrarSesion()) {
+			location.href = "index.html";
+		}
+	}
 }
