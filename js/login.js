@@ -4,7 +4,7 @@ let correo, clave, usuario, imagen, titulo, mensaje;
 /*
 navegacion centralizada
 */
-let nombre,celular;
+let nombre, celular;
 let paginas = [];
 //var iniciarLogin = undefined
 let menu_items = [];
@@ -26,46 +26,36 @@ let sesion_off = `
 <span class="fa fa-pencil-square-o"></span> Registro</a>`;
 
 window.onload = function () {
-    contenedor_menu = document.querySelector(".nav");
-    contenedor_menu.innerHTML = menu_html;
-    setTimeout(hideURLbar, 0);
+	contenedor_menu = document.querySelector(".nav");
+	contenedor_menu.innerHTML = menu_html;
+	setTimeout(hideURLbar, 0);
 
-    cont_sesion = document.querySelector(".forms");
-    cambiarSesion(JSON.parse(localStorage.getItem("logeado")));
-	/*
-    if (iniciarLogin) {
-        
-        iniciarLogin();
-    }
+	cont_sesion = document.querySelector(".forms");
+	cambiarSesion(JSON.parse(localStorage.getItem("logeado")));
 
-    if (iniciarRegistro) {
-        
-        iniciarRegistro();
-    }*/
+	asignarNavegacion();
 
-    asignarNavegacion();
-	
 }
 
 function asignarNavegacion() {
-    menu_items.push(document.getElementById("item_1"));
-    menu_items.push(document.getElementById("item_2"));
-    menu_items.push(document.getElementById("item_3"));
-    menu_items.push(document.getElementById("item_4"));
-    menu_items.push(document.getElementById("item_5"));
-    menu_items.push(document.getElementById("item_6"));
+	menu_items.push(document.getElementById("item_1"));
+	menu_items.push(document.getElementById("item_2"));
+	menu_items.push(document.getElementById("item_3"));
+	menu_items.push(document.getElementById("item_4"));
+	menu_items.push(document.getElementById("item_5"));
+	menu_items.push(document.getElementById("item_6"));
 
-    paginas["item_1"] = "index.html";
-    paginas["item_2"] = "about.html";
-    paginas["item_3"] = "games.html";
-    paginas["item_4"] = "news.html";
-    paginas["item_5"] = "single.html";
-    paginas["item_6"] = "contact.html";
+	paginas["item_1"] = "index.html";
+	paginas["item_2"] = "about.html";
+	paginas["item_3"] = "games.html";
+	paginas["item_4"] = "news.html";
+	paginas["item_5"] = "single.html";
+	paginas["item_6"] = "contact.html";
 
-    /*
-    for (var i of menu_items) {
-        i.addEventListener("click", abrirPagina);
-    }*/
+	/*
+	for (var i of menu_items) {
+		i.addEventListener("click", abrirPagina);
+	}*/
 }
 
 /*
@@ -73,7 +63,7 @@ fin navegacion centralizada*/
 
 function iniciarLogin() {
 
-	
+
 
 	btn_enviar = document.getElementById("btn_enviar");
 	btn_cerrar_modal = document.getElementById("btn_cerrar_modal");
@@ -135,9 +125,9 @@ function procesarLogin(evento) {
 	if (usuario) {
 		if (usuario.correo === txt_correo && usuario.clave === txt_clave) {
 			cambiarSesion(true);
-			
+
 			mensaje_exito("Muy bien, logueo exitoso, continua disfrutando del sitio.");
-			
+
 		}
 		else {
 			error = true;
@@ -160,8 +150,8 @@ function procesarLogin(evento) {
 }
 
 function cambiarSesion(bandera) {
-	
-	
+
+
 
 	logeado = bandera;
 	//console.log(logeado);
@@ -170,11 +160,11 @@ function cambiarSesion(bandera) {
 
 	if (logeado) {
 		cont_sesion.innerHTML = sesion_on;
-		
+
 	}
 	else {
 		cont_sesion.innerHTML = sesion_off;
-		
+
 
 		if (cerrarSesion()) {
 			location.href = "index.html";

@@ -48,7 +48,6 @@ function cambiarSesion(bandera) {
 
 
     logeado = bandera;
-    //console.log(logeado);
 
     localStorage.setItem("logeado", logeado);
 
@@ -68,7 +67,6 @@ function cambiarSesion(bandera) {
 
 function cerrarSesion() {
     let pagina_actual = location.pathname.split("/").pop();
-    // || pagina_actual === paginas["item_4"] || pagina_actual === paginas["item_5"]
     return (pagina_actual === paginas["item_3"]);
 }
 
@@ -107,9 +105,6 @@ function abrirPagina(evento) {
     let pagina = evento.target.id;
     let puede_ingresar = true;
 
-
-
-    // || pagina === "item_4" || pagina === "item_5"
     if (pagina === "item_3") {
 
         puede_ingresar = logeado;
