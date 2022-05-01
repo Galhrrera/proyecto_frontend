@@ -1,9 +1,10 @@
 let btn_enviar, btn_cerrar_modal, formulario, ventana;
 let correo, clave, usuario, imagen, titulo, mensaje;
 
+
+
 function iniciarLogin() {
-	try {
-		console.log("Entró a iniciar login");
+	
 		btn_enviar = document.getElementById("btn_enviar");
 		btn_cerrar_modal = document.getElementById("btn_cerrar_modal");
 		mensaje = document.querySelector("#ventana p");
@@ -15,9 +16,6 @@ function iniciarLogin() {
 		formulario = document.getElementById("formulario");
 		formulario.addEventListener("submit", procesarLogin);
 		btn_cerrar_modal.addEventListener("click", cerrarVentana);
-	} catch (error) {
-		console.log(error);
-	}
 }
 
 function mensaje_exito(texto_mensaje) {
@@ -52,7 +50,7 @@ function cerrarVentana(evento) {
 }
 
 function procesarLogin(evento) {
-	console.log("Entró a procesar login")
+	//console.log("Entró a procesar login")
 
 
 	let txt_correo, txt_clave;
@@ -64,12 +62,16 @@ function procesarLogin(evento) {
 	str_usuario = localStorage.getItem("usuario");
 	usuario = JSON.parse(str_usuario);
 
-	console.log(usuario.correo);
+	alert(usuario.correo);
+	alert(usuario.clave);
 
 	if (usuario) {
 		if (usuario.correo === txt_correo && usuario.clave === txt_clave) {
 			cambiarSesion(true);
-			mensaje_exito("Muy bien, logueo exitoso, continua disfrutando del sitio.");
+			alert("Muy bien, logueo exitoso, continua disfrutando del sitio.");
+			//mensaje_exito("Logeado");
+			//abrirVentana();
+			window.location="index.html";
 		}
 		else {
 			error = true;
@@ -79,13 +81,34 @@ function procesarLogin(evento) {
 	}
 
 	if (error) {
-		mensaje_error("Revisa los datos, ocurrio un error.");
+		alert("Revisa los datos, ocurrio un error.");
 	}
 
-	abrirVentana();
+	//abrirVentana();
 	evento.preventDefault();
 
 
 	//console.log(evento.target);
 
+}
+
+function cambiarSesion(bandera) {
+    alert("Entró a cambiar sesion");
+
+    logeado = bandera;
+    //console.log(logeado);
+    localStorage.setItem("logeado", logeado);
+
+    if (logeado) {
+        cont_sesion.innerHTML = sesion_on;
+        alert("leageado");
+    }
+    else {
+        cont_sesion.innerHTML = sesion_off;
+        alert("sesion off");
+
+        if (cerrarSesion()) {
+            location.href = "index.html";
+        }
+    }
 }

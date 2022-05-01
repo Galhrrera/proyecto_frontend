@@ -11,9 +11,6 @@ const menu_html = `
 <li class="hover-effect"><a href="news.html">News</a></li>
 <li class="hover-effect"><a href="contact.html">Contact</a></li>`;
 let sesion_on = `
-<span>
-    <img src="images/avatar.png" alt="">
-</span>
 <a href="javascript:void(0)" id="cerrar_sesion" onClick="cambiarSesion(false);" class="btn"><i class="fa fa-sign-out" aria-hidden="true"></i> Cerrar sesión</a>
 `;
 let sesion_off = `
@@ -21,6 +18,8 @@ let sesion_off = `
 <span class="fa fa-user-circle-o"></span> Login</a>
 <a href="register.html" class="btn">
 <span class="fa fa-pencil-square-o"></span> Registro</a>`;
+
+
 
 window.onload = function () {
     contenedor_menu = document.querySelector(".nav");
@@ -31,10 +30,12 @@ window.onload = function () {
     cambiarSesion(JSON.parse(localStorage.getItem("logeado")));
 
     if (iniciarLogin) {
+        
         iniciarLogin();
     }
 
     if (iniciarRegistro) {
+        
         iniciarRegistro();
     }
 
@@ -42,16 +43,20 @@ window.onload = function () {
 }
 
 function cambiarSesion(bandera) {
+    
 
     logeado = bandera;
-    console.log(logeado);
+    //console.log(logeado);
+    
     localStorage.setItem("logeado", logeado);
 
     if (logeado) {
         cont_sesion.innerHTML = sesion_on;
+        
     }
     else {
         cont_sesion.innerHTML = sesion_off;
+        
 
         if (cerrarSesion()) {
             location.href = "index.html";
@@ -61,7 +66,8 @@ function cambiarSesion(bandera) {
 
 function cerrarSesion() {
     let pagina_actual = location.pathname.split("/").pop();
-    return (pagina_actual === paginas["item_3"] || pagina_actual === paginas["item_4"] || pagina_actual === paginas["item_5"]);
+    // || pagina_actual === paginas["item_4"] || pagina_actual === paginas["item_5"]
+    return (pagina_actual === paginas["item_3"]);
 }
 
 function asignarNavegacion() {
@@ -81,6 +87,7 @@ function asignarNavegacion() {
 
     /*
     for (var i of menu_items) {
+        
         i.addEventListener("click", abrirPagina);
     }*/
 }
@@ -94,7 +101,10 @@ function abrirPagina(evento) {
     let pagina = evento.target.id;
     let puede_ingresar = true;
 
-    if (pagina === "item_3" || pagina === "item_4" || pagina === "item_5") {
+    
+
+    // || pagina === "item_4" || pagina === "item_5"
+    if (pagina === "item_3") {
         puede_ingresar = logeado;
     }
 
