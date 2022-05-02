@@ -10,11 +10,11 @@ let paginas = [];
 let menu_items = [];
 
 const menu_html = `
-<li class="hover-effect"><a href="index.html">Home</a></li>
-<li class="hover-effect"><a href="about.html">About</a></li>
-<li class="hover-effect"><a href="games.html">Games</a></li>
-<li class="hover-effect"><a href="news.html">News</a></li>
-<li class="hover-effect"><a href="contact.html">Contact</a></li>`;
+<li class="hover-effect"><a href="index.html">Inicio</a></li>
+<li class="hover-effect"><a href="about.html">Acerca de</a></li>
+<li class="hover-effect"><a href="games.html">Juego - API</a></li>
+<li class="hover-effect"><a href="news.html">Novedades</a></li>
+<li class="hover-effect"><a href="contact.html">Contacto</a></li>`;
 
 let sesion_on = `
 <a href="javascript:void(0)" id="cerrar_sesion" onClick="cambiarSesion(false);" class="btn"><i class="fa fa-sign-out" aria-hidden="true"></i> Cerrar sesión</a>
@@ -46,10 +46,10 @@ function asignarNavegacion() {
 	menu_items.push(document.getElementById("item_6"));
 
 	paginas["item_1"] = "index.html";
-	paginas["item_2"] = "Acerca de.html";
-	paginas["item_3"] = "Juego - API.html";
-	paginas["item_4"] = "Novedades.html";
-	paginas["item_5"] = "Contacto.html";
+	paginas["item_2"] = "about.html";
+	paginas["item_3"] = "games.html";
+	paginas["item_4"] = "news.html";
+	paginas["item_5"] = "contact.html";
 	
 
 	/*
