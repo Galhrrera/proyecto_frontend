@@ -80,9 +80,9 @@ img {
 /*-- Navbar --*/
 .navbar {
 	margin-bottom: 0;
-	position: absolute;
+	position: fixed;
 	z-index: 99999;
-	background: transparent;
+	background: #FF0000;
 	border: none;
 	border-radius: 0;
 	width: 100%;
@@ -103,7 +103,7 @@ img {
 }
 
 .menu>li {
-	
+
 	padding: 5px 15px;
 }
 
@@ -599,7 +599,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 
 /*-- services bottom --*/
 .services-bottom-w3-agileits {
-	background: url(../images/sbbg.jpg) no-repeat 0px 0px;
+	background: url(../images/mario.jpg) no-repeat 0px 0px;
 	background-size: cover;
 	background-attachment: fixed;
 	-webkit-background-size: cover;
@@ -2505,7 +2505,7 @@ a.blog-read:hover {
 		background: #02178e;
 	}
 
-	.menu{
+	.menu {
 		margin: 0;
 		background: #02178e;
 	}
@@ -3519,98 +3519,154 @@ a.blog-read:hover {
 		justify-content: center;
 	}
 
-	.team {
-		padding: 10px;
-		margin: 10px;
-		background-color: yellow;
-	}
+}
 
-	.show {
-		display: block;
-	}
+/*PROPIOS*/
 
-	.hidden {
-		display: none;
-	}
+.centrar {
 
-	.ligthbox {
-		position: fixed;
-		top: 0px;
-		left: 0px;
-		width: 100%;
-		height: 100%;
-		background: rgba(0, 0, 0, .6);
-		z-index: 999;
-	}
+	display: flex;
+	justify-content: center;
 
-	.contenido-ventana {
-		position: relative;
-		background-color: #fff;
-		width: 500px;
-		height: 250px;
-		margin-right: auto;
-		margin-left: auto;
-		top: 50%;
-		margin-top: -115px;
-		border-radius: 10px;
-		padding: 20px;
-	}
+}
 
-	#btn_cerrar_modal {
-		position: absolute;
-		bottom: 10px;
-		left: 50%;
-		width: 150px;
-		margin-left: -75px;
-		background: white;
-		border-radius: 10px;
-		height: 49px;
-		line-height: 17px;
-		cursor: pointer;
-	}
+.btn_centrar {
+	width: 250px;
+	;
+}
 
-	.contenido-ventana p {
-		position: absolute;
-		top: 125px;
-		left: 50px;
-		text-align: center;
-		width: 400px;
-		height: 70px;
-	}
 
-	.contenido-ventana span {
-		position: absolute;
-		left: 50%;
-		width: 50px;
-		margin-left: -25px;
-		height: 50px;
-		text-align: center;
-		font-size: 40px;
-	}
 
-	.contenido-ventana h1 {
-		position: absolute;
-		left: 50%;
-		width: 140px;
-		margin-left: -70px;
-		height: 40px;
-		text-align: center;
-		top: 71px;
-	}
+.container_api {
+	position: relative;
+	text-align: center;
+}
 
-	.color_exito_texto {
-		color: #0df50d;
-	}
+.team {
+	padding: 10px;
+	margin: 10px;
+	background-color: yellow;
+}
 
-	.color_exito_borde {
-		border: 1px solid #0df50d;
-	}
+.show {
+	display: block;
+}
 
-	.color_error_texto {
-		color: #e74147;
-	}
+.hidden {
+	display: none;
+}
 
-	.color_error_borde {
-		border: 1px solid #e74147;
-	}
+.ligthbox {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .6);
+	z-index: 999;
+}
+
+.contenido-ventana {
+	position: relative;
+	background-color: #fff;
+	width: 500px;
+	height: 250px;
+	margin-right: auto;
+	margin-left: auto;
+	top: 50%;
+	margin-top: -115px;
+	border-radius: 10px;
+	padding: 20px;
+}
+
+#btn_cerrar_modal {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	width: 150px;
+	margin-left: -75px;
+	background: white;
+	border-radius: 10px;
+	height: 49px;
+	line-height: 17px;
+	cursor: pointer;
+}
+
+.contenido-ventana p {
+	position: absolute;
+	top: 125px;
+	left: 50px;
+	text-align: center;
+	width: 400px;
+	height: 70px;
+}
+
+.contenido-ventana span {
+	position: absolute;
+	left: 50%;
+	width: 50px;
+	margin-left: -25px;
+	height: 50px;
+	text-align: center;
+	font-size: 40px;
+}
+
+.contenido-ventana h1 {
+	position: absolute;
+	left: 50%;
+	width: 140px;
+	margin-left: -70px;
+	height: 40px;
+	text-align: center;
+	top: 71px;
+}
+
+.color_exito_texto {
+	color: #0df50d;
+}
+
+.color_exito_borde {
+	border: 1px solid #0df50d;
+}
+
+.color_error_texto {
+	color: #e74147;
+}
+
+.color_error_borde {
+	border: 1px solid #e74147;
+}
+
+#btn_whatsapp {
+	position: fixed;
+	max-width: 5%;
+	max-height: 15%;
+	bottom: 10px;
+	right: 10px;
+}
+
+footer {
+	background: white;
+	padding: 60px 0 30px 0;
+	margin: auto;
+	overflow: hidden;
+}
+
+.footer_contenedor {
+	display: flex;
+	width: 90%;
+	justify-content: space-evenly;
+	margin: auto;
+	padding-bottom: 50px;
+	border-bottom: 1px;
+}
+
+.contenido_footer {
+	text-align: center;
+}
+
+.titulo_final {
+	text-align: center;
+	font-size: 24px;
+	margin: 20px 0 0 0;
 }
