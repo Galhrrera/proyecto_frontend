@@ -5,11 +5,11 @@ var iniciarLogin = undefined, iniciarRegistro = undefined;
 let cont_sesion;
 let logeado = false;
 const menu_html = `
-<li class="hover-effect"><a href="javascript:void(0)" id = "item_1">Home</a></li>
-<li class="hover-effect"><a href="javascript:void(0)" id = "item_2">About</a></li>
-<li class="hover-effect"><a href="javascript:void(0)" id = "item_3">Games</a></li>
-<li class="hover-effect"><a href="javascript:void(0)" id = "item_4">News</a></li>
-<li class="hover-effect"><a href="javascript:void(0)" id = "item_5">Contact</a></li>
+<li class="hover-effect"><a href="javascript:void(0)" id = "item_1">Inicio</a></li>
+<li class="hover-effect"><a href="javascript:void(0)" id = "item_2">Acerca de</a></li>
+<li class="hover-effect"><a href="javascript:void(0)" id = "item_3">Juego - API</a></li>
+<li class="hover-effect"><a href="javascript:void(0)" id = "item_4">Novedades</a></li>
+<li class="hover-effect"><a href="javascript:void(0)" id = "item_5">Contacto</a></li>
 `;
 let sesion_on = `
 <a href="javascript:void(0)" id="cerrar_sesion" onClick="cambiarSesion(false);" class="btn"><i class="fa fa-sign-out" aria-hidden="true"></i> Cerrar sesión</a>
