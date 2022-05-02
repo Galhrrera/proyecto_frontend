@@ -46,11 +46,11 @@ function asignarNavegacion() {
 	menu_items.push(document.getElementById("item_6"));
 
 	paginas["item_1"] = "index.html";
-	paginas["item_2"] = "about.html";
-	paginas["item_3"] = "games.html";
-	paginas["item_4"] = "news.html";
-	paginas["item_5"] = "single.html";
-	paginas["item_6"] = "contact.html";
+	paginas["item_2"] = "Acerca de.html";
+	paginas["item_3"] = "Juego - API.html";
+	paginas["item_4"] = "Novedades.html";
+	paginas["item_5"] = "Contacto.html";
+	
 
 	/*
 	for (var i of menu_items) {
